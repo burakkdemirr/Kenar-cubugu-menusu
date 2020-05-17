@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body{
+	font-family: -apple-system, BlinkMacSystemFont,
+				 'Segeo UI', Roboto, Oxygen, Ubuntu, Cantarell,
+				 'Open Sans', 'Helvetica Neue', sans-serif;
+user-select: none;
+}
+.sidebar{
+position: fixed;
+height: 100vh;
+width:300px;
+left: -300px;
+background: #042331;
+transition: all .6s;
+}
+.sidebar header{
+	background: #063146;
+	padding: 17.5px 17.5px;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: left;
+	color: white;
+
+}
+.sidebar ul{
+	line-height: 65px;
+	font-size: 20px;
+}
+.sidebar ul li:hover a{
+	padding-left: 30px;
+	color: white;
+}
+.sidebar ul li{
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid black;
+}
+.sidebar ul li:hover{ 
+background: #063044;
+ }
+ .sidebar ul li a{
+ 	color: rgb(214, 209, 209);
+ 	margin-left: 20px;
+ 	transition: all .6s ease;
+ }
+ .sidebar ul li a i{
+ 	margin-right: 7px;
+ }
+input{display:none;}
+label #menu , label #close{
+	font-size: 20px;	
+	position: fixed;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 1s;
+}
+label #menu{
+	margin: 30px 30px;
+	padding: 10px 15px 10px 15px;
+	background: transparent;
+	border: 1px solid white;
+	transition: all 1s ease;
+}
+label #close{
+	border: 1px solid white;
+	color: white;
+	top: 26px;
+	left: -230px;
+	z-index: 1111;
+	transition: all .6s;
+}
+#check:checked ~ .sidebar{left: 0px; }
+#check:checked ~ label #close{left: 230px; }
+#check:checked ~ section{margin-left: 300px; }
+section{
+	background: url(code.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	transition: all .6s;
+}
